@@ -1,0 +1,1 @@
+### for a while will be empty, i'm mainly learning JS now and most of my progress is being sent to [this repo](https://github.com/Gabriel-Marino/freeCodeCamp---JavaScript-Algorithms-and-Data-Structures)
