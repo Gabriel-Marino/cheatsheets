@@ -49,3 +49,17 @@ function calculator (operationName: string, value1: number, value2: number)
     const op = opertions[operationName];
     if (op) return op(value1, value2);
 }
+
+const testing = {
+
+    // test if the propery exists in the object, if true return the value of the property otherwise return "Not found".
+    exist (prop: string)
+    {
+        if (this.hasOwnProperty(prop)) return this[prop];
+        return "Not found";
+    }
+};
+
+testing.exist("name");      // "Not found"
+testing["exist"]("name");   // "Not found"
+testing["exist"]("exist");  // Returns the function exist()
