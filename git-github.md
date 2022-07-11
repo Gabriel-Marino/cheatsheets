@@ -119,3 +119,25 @@
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Git Tips from Fireship
+
+[Check the lesson here](https://fireship.io/courses/git/advanced-bonus-tips/)
+
+1. git commit -am "commit message" to add and commit all files in the working directory.
+2. git commit --amend to edit the last commit. Use --no-edit to commit without editing the message. Only work if the commit wasn't pushed to a remote. Otherwise will lead to a conflict.
+3. git push origin master --force to overwrite the history of the remote.
+4. git revert to undo the last commit.
+5. if you need to work remotely, but don't have access to your machine, you can use any computer with an internet browser, access your repo and hit the period key "." to open the github online editor, which is a vscode version for browsers. You can do anything less using the terminal, but is possible to set a github codespace in the cloud to virtualize the terminal.
+6. git stash to save the current state of the repo for later use, without the risk of committing them. git stash pop to restore the state of the repo. git statsh save &lt;name&gt; to save the current state of the repo with a name. git stash list to list all saved states. git stash apply &lt;index&gt; to restore the state of the repo.
+7. git branch -M &lt;new_name&gt; to rename a branch.
+8. git log --graph --oneline --decorate to see the history of the repo in a less verbose way.
+9. git bisect &lt;start | good | bad> to find the commit that introduced a bug.
+10. When you want to merge the changes of a branch with the main branch, but have some pointless commits you can use git rebase master --interactive so you can squash everything inside one commit before merging. To use squash only change the pick keyword to squash. Squash will combine the message from all commits to avoid this use fixup instead. Is possible to use git commit --squash &lt;commit_id&gt; to squash the changes into a existing commit, or with --fixup and then use git rebase -i --autosquash to handle the squash.
+11. Hooks is actions that git will execute every time when a command is executed. To configure hooks go into .git/hooks
+12. When the development is not going well, you can recover the last version of the repo with the cost of **Destroying every change made locally**, you can do the following: git fetch origin && git reset --hard origin/master && git clean -df.
+13. git checkout - to go back to the last working branch.
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
