@@ -1,1 +1,0 @@
---  in the followings weeks this will be the first database type i'll learn, so i just left the space here to fill soon
